@@ -1,0 +1,101 @@
+#result {
+    background: rgba($color3, 10%);
+    .container {
+        gap: 2rem 0;
+        .text {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 1rem 0;
+            p {
+                color: $color3;
+                font-size: 18px;
+            }
+        }
+        .seta {
+            width: 83%;
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            align-items: center;
+            gap: 0 1rem;
+            img {
+                width: 35px;
+                height: auto;
+                display: block;
+                cursor: pointer;
+                transition: all 0.5s ease;
+            }
+            .swiper-button-prev-result {
+                transform: rotateZ(180deg);
+            }
+        }
+        #car {
+            width: 70vw;
+            display: grid;
+            place-items: center;
+            .swiper {
+                width: 100%;
+                border-radius: 19px;
+                overflow: hidden;
+                .swiper-wrapper {
+                    .swiper-slide {
+                        display: grid;
+                        place-items: center;
+                        transform: scale(0.8);
+                        img {
+                            width: 100%;
+                            height: auto;
+                            border-radius: 19px;
+                        }
+                        &.swiper-slide-next {
+                            transform: scale(1);
+                        }
+                    }
+                }
+            }
+        }
+        .btn {
+            padding: 2% 0 0;
+        }
+    }
+}
+@media (max-width: 800px) {
+    #result {
+        .container {
+            .text {
+                order: 1;
+                width: 100%;
+            }
+            #car {
+                order: 2;
+                width: 80vw;
+                .swiper {
+                    .swiper-wrapper {
+                        .swiper-slide {
+                            &.swiper-slide-active {
+                                transform: scale(1);
+                            }
+                            &.swiper-slide-next {
+                                transform: scale(0.8);
+                            }
+                        }
+                    }
+                }
+            }
+            .seta {
+                order: 3;
+                justify-content: center;
+                img {
+                    width: 45px;
+                }
+            }
+            .btn {
+                order: 4;
+            }
+        }
+    }
+}

@@ -1,0 +1,110 @@
+#home {
+    background: url(../assets/img/home.webp);
+    background-position: 50% 50%;
+    height: 100vh;
+    place-items: center;
+    &::after {
+        content: ("");
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        // background: rgba($color4, 30%);
+        background: rgba($color4, 30%);
+        z-index: 1;
+    }
+    .container {
+        height: 100%;
+        display: grid;
+        place-items: center start;
+        z-index: 2;
+        .text {
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            text-align: start;
+            gap: 1.5rem 0;
+            h1 {
+                font-size: 28px;
+                color: $color3;
+                font-weight: 600;
+                strong {
+                    color: $color4;
+                }
+            }
+        }
+    }
+    .btn-flut {
+        height: 50px;
+        width: 50px;
+        position: fixed;
+        z-index: 9;
+        bottom: 5%;
+        right: -5%;
+        opacity: 0;
+        display: grid;
+        place-items: center;
+        transition: all 0.5s ease-in;
+        z-index: 9;
+        &:hover {
+            transform: scale(0.9);
+        }
+        &[data-active="true"] {
+            right: 5%;
+            opacity: 1;
+        }
+        img {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 8;
+        }
+    }
+}
+@media (max-width: 800px) {
+    #home {
+        background-position: 100% 100%;
+        &::after {
+            background: rgba($color4, 40%);
+        }
+        .container {
+            height: 80%;
+            grid-template-columns: repeat(1, 1fr);
+            place-items: end center;
+            gap: 2rem 0;
+            .text {
+                width: 100%;
+                text-align: center;
+                align-items: center;
+                h1 {
+                    width: 100%;
+                    font-size: 22px;
+                }
+                p {
+                    width: 100%;
+                }
+            }
+            .cont-icon {
+                width: 100%;
+                height: auto;
+                place-items: center;
+                position: relative;
+                right: auto;
+                .icon {
+                    height: auto;
+                    width: 100%;
+                    flex-direction: row;
+                    gap: 0 1rem;
+                    .cont-after {
+                        width: 100%;
+                        height: 2px;
+                    }
+                }
+            }
+        }
+    }
+}

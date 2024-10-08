@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="28" viewBox="0 0 28 28">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="1" stop-color="#0FBCB9"/>
+    </linearGradient>
+  </defs>
+  <g id="localizacao" transform="translate(0.441)">
+    <circle id="Elipse_6" data-name="Elipse 6" cx="14" cy="14" r="14" transform="translate(-0.441 0)" fill="url(#linear-gradient)"/>
+    <path id="_2fd29c034b11ed3cc97e4d0928843b9a" data-name="2fd29c034b11ed3cc97e4d0928843b9a" d="M9.734,2A5.734,5.734,0,0,0,4,7.734c0,3.871,5.053,8.243,5.268,8.429a.717.717,0,0,0,.932,0c.251-.186,5.268-4.559,5.268-8.429A5.734,5.734,0,0,0,9.734,2Zm0,12.651c-1.527-1.434-4.3-4.523-4.3-6.917a4.3,4.3,0,0,1,8.6,0C14.035,10.128,11.261,13.224,9.734,14.651Zm0-9.784A2.867,2.867,0,1,0,12.6,7.734,2.867,2.867,0,0,0,9.734,4.867Zm0,4.3a1.434,1.434,0,1,1,1.434-1.434A1.434,1.434,0,0,1,9.734,9.168Z" transform="translate(3.825 4.832)" fill="#131313"/>
+  </g>
+</svg>

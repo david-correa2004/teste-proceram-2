@@ -1,0 +1,229 @@
+#treatments {
+    display: grid;
+    place-items: center;
+    .container {
+        width: 80%;
+        display: grid;
+        place-items: center;
+        z-index: 2;
+        gap: 0;
+        border-radius: 25px;
+        .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: .5rem 0;
+            padding: 0 0 5%;
+        }
+        #car {
+            width: 80vw;
+            position: relative;
+            display: grid;
+            place-items: center;
+            gap: 1rem 0;
+            border-radius: 17px;
+            overflow: hidden;
+            .seta {
+                width: 100%;
+                height: 70%;
+                position: absolute;
+                top: 0;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                gap: 0 1rem;
+                img {
+                    width: 35px;
+                    height: auto;
+                    cursor: pointer;
+                    transition: all 0.5s ease;
+                }
+                .swiper-button-prev1 {
+                    transform: rotateZ(180deg);
+                }
+            }
+            .swiper {
+                width: 90%;
+                display: flex;
+                align-items: center;
+                height: 90px;
+                padding: 0 5px;
+                z-index: 2;
+                .swiper-wrapper {
+                    .swiper-slide {
+                        height: 100%;
+                        display: grid;
+                        place-items: start center;
+                        transition: all 0.5s ease;
+                        gap: 0.5rem 0;
+                        cursor: pointer;
+                        border-radius: 17px;
+                        overflow: hidden;
+                        .cont{
+                            background: rgba($color3, 10%);
+                            width: 100%;
+                            height: 70%;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            text-align: center;
+                            position: relative;
+                            border-radius: 17px;
+                            z-index: 2;
+                            h3 {
+                                width: 80%;
+                                color: $color3;
+                                transition: all 0.5s ease;
+                                font-size: 20px;
+                                z-index: 2;
+                            }
+                            &::after{
+                                content: ('');
+                                position: absolute;
+                                display: block;
+                                width: 99.5%;
+                                height: 0;
+                                top: 0;
+                                left: 0;
+                                z-index: 1;
+                                background: $color1;
+                                border-radius: 17px;
+                                transition: all .5s ease;
+                            }
+                        }
+                        &::before{
+                            content: ('');
+                            position: absolute;
+                            display: block;
+                            width: 5px;
+                            height: 0;
+                            top: 0;
+                            background: $color1;
+                            z-index: 1;
+                            border-radius: 17px;
+                            transition: all .1s ease;
+                        }
+                        &:hover{
+                            .cont{
+                                &::after{
+                                    height: 20%;
+                                    opacity: .8;
+                                }
+                            }
+                        }
+                        &[data-active="true"]{
+                            .cont{
+                                &::after{
+                                    height: 100%;
+                                }
+                                h3{
+                                    color: $color4;
+                                }
+                            }
+                            &::before{
+                                transition: all 1s ease-in;
+                                height: 200%;
+                            }
+                            &:hover{
+                                .cont{
+                                    &::after{
+                                        height: 100%;
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #dental_container{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            place-items: center;
+            background: rgba($color3, 10%);
+            border-radius: 50px;
+            padding: 5% 0;
+            position: relative;
+            .text{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: all .5s ease;
+                position: relative;
+                h2{
+                    width: 80%;
+                }
+                p{
+                    width: 80%;
+                }
+            }
+            .img{
+                width: 100%;
+                display: grid;
+                place-items: center;
+                img{
+                    width: 70%;
+                    border-radius: 25px;
+                    transition: all .5s ease;
+                }
+            }
+        }
+        .btn {
+            padding: 5% 0 0;
+        }
+    }
+}
+@media (max-width: 800px) {
+    #treatments{
+        padding: 15% 0;
+        .container{
+            width: 90%;
+            .text{
+                text-align: center;
+                padding: 0 0 10%;
+            }
+            #car{
+                width: 90vw;
+                .swiper{
+                    width: 75%;
+                }
+                .seta{
+                    img{
+                        width: 40px;
+                    }
+                }
+            }
+            #dental_container{
+                grid-template-columns: repeat(1,1fr);
+                gap: 3rem 0;
+                padding: 15% 0;
+                border-radius: 30px;
+                .text{
+                    width: 80%;
+                    order: 2;
+                    padding: 0;
+                    h2,p{
+                        width: 100%;
+                    }
+                }
+                .img{
+                    width: 80%;
+                    order: 1;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            .btn{
+                padding: 10% 0 0;
+            }
+        }
+    }
+}
